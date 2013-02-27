@@ -38,7 +38,17 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "frontend";
+
+/*
+|
+| Rerouted controllers
+|
+*/
+$route['home']      =   'frontend/homepage';
+$route['search']    =   'frontend/search';
+/* end of rerouting */
+
 $route['404_override'] = '';
 
 
