@@ -105,8 +105,9 @@ if (defined('ENVIRONMENT'))
 	// $routing['function']	= '';
 
   $base_url = current(explode("/", strtolower($_SERVER['SERVER_PROTOCOL'])));
+  $base_url.= "://" . $_SERVER['HTTP_HOST'];
+  $base_url.= current(explode("/index.php", $_SERVER['SCRIPT_NAME']))."/";
   
-  echo $base_url;
 /*
  * -------------------------------------------------------------------
  *  CUSTOM CONFIG VALUES
@@ -177,7 +178,9 @@ if (defined('ENVIRONMENT'))
 	// Name of the "system folder"
 	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
-
+  // The base_url()
+  define('base_url', $base_url);
+  
 	// The path to the "application" folder
 	if (is_dir($application_folder))
 	{
