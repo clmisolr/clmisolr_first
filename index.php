@@ -104,7 +104,9 @@ if (defined('ENVIRONMENT'))
 	// The controller function you wish to be called.
 	// $routing['function']	= '';
 
-
+  $base_url = current(explode("/", strtolower($_SERVER['SERVER_PROTOCOL'])));
+  
+  echo $base_url;
 /*
  * -------------------------------------------------------------------
  *  CUSTOM CONFIG VALUES
