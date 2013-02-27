@@ -9,7 +9,11 @@
     <div class="wrap">
       <div class="container">
         <header>
-          <h2>Leyte Normal University</h2>
+          <h2>
+            <img src="<?php echo base_url("clmisolr.ico");?>" />
+            <span style="position: relative; top: -10px;">Leyte Normal University</span><br/>
+            <strong style="position: relative;top: -55px;left: 99px;font-size: 12px;display: inline;">Center of Excellence for Teacher Education</strong>
+          </h2>
         </header>
         <div class="navbar">
             <div class="navbar-inner">
